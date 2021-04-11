@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar || HTML CSS JS</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- font-awesome link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <nav>
+    <label for="logo" class="logo">Coding Mean</label>
+    <span id="showMenu"><i class="fa fa-bars"></i></span>
+    <span id="hideMenu"><i class="fa fa-times"></i></span>
+    <ul id="menu">
+      <li><a class="current" href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Feedback</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- starting javascript here -->
+  <script type="text/javascript">
+    const showMenu = document.getElementById('showMenu');
+    const hideMenu = document.getElementById('hideMenu');
+    const menu = document.getElementById('menu');
+
+    showMenu.onclick = ()=>{
+      showMenu.style.display = 'none';
+      hideMenu.style.display = "block";
+      menu.classList.add("show");
+      menu.classList.remove("hide");
+    }
+    hideMenu.onclick = ()=>{
+      hideMenu.style.display = 'none';
+      showMenu.style.display = "block";
+      menu.classList.add("hide");
+      menu.classList.remove("show");
+    }
+
+  </script>
+</body>
+</html>

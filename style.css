@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+nav {
+  width: 100%;
+  height: 80px;
+  background: #f42d25;
+}
+label.logo{
+  font-size: 30px;
+  color: #fff;
+  font-weight: bold;
+  padding: 0 95px;
+  line-height: 80px;
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  margin: 0 10px;
+  display: inline-block;
+  line-height: 80px;
+}
+nav ul li a{
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+nav ul li a.current,
+nav ul li a:hover{
+  background: orange;
+  transition: 0.3s;
+}
+span{
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  margin-right: 40px;
+  float: right;
+  line-height: 80px;
+  cursor: pointer;
+  display: none;
+}
+#hideMenu{
+  display: none;
+}
+nav ul.show{
+  left: 0%;
+  transition: 0.3s ease;
+}
+nav ul.hide{
+  left: -100%;
+  transition: 0.3s ease;
+}
+
+/* starting media query here */
+
+@media only screen and (max-width: 945px) {
+  label.logo{
+    font-size: 25px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+
+
+@media only screen and (max-width: 850px) {
+  span{
+    display: block;
+  }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background: #1b1b1b;
+    left: -100%;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+    padding: 8px 15px;
+  }
+  nav ul li a.current,
+  nav ul li a:hover{
+    background: transparent;
+    color: #f42d25;
+  }
+}
